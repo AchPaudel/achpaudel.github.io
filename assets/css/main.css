@@ -2670,6 +2670,9 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 	}
+		.spotlight p {
+			margin-bottom: 5px;
+		}
 
 		.spotlight .image {
 			-moz-order: 1;
@@ -2686,13 +2689,14 @@ input, select, textarea {
 			}
 
 		.spotlight .content {
-			padding: 2em 4em 0.1em 4em ;
+			padding: 2em 4em 2em 4em ;
 			-moz-order: 2;
 			-webkit-order: 2;
 			-ms-order: 2;
 			order: 2;
 			max-width: 48em;
 			width: 60%;
+
 		}
 
 		.spotlight:nth-child(2n) {
@@ -2784,8 +2788,39 @@ input, select, textarea {
 			}
 
 		}
+/* Skills Bar */
+	/* Make sure that padding behaves as expected */
+	* {box-sizing:border-box}
+
+	/* Container for skill bars */
+	.container {
+	width: 100%; /* Full width */
+	background-color: #ddd; /* Grey background */
+	height: 10px;
+	}
+
+	.skills {
+	text-align: right; /* Right-align text */
+	font-size: 14px;
+	height: 10px;
+	padding-top: 5px; /* Add top padding */
+	padding-bottom: 5px; /* Add bottom padding */
+	color: white; /* White text color */
+	}
+
+	.html {width: 95%; background-color: #21b2a6;} /* Green */ /* Blue */
+	.js {width: 70%; background-color: #21b2a6;} /* Red */
+	.php {width: 60%; background-color: #21b2a6;} /* Dark Grey */
+	.sql {width: 90%; background-color: #21b2a6;} 
+	.py {width: 85%; background-color: #21b2a6;} 
+	.c {width: 80%; background-color: #21b2a6;} 
 
 /* Wrapper */
+	.certifications img{
+		width: 20%;
+		height: 20%;
+		padding: 1em;
+	}
 
 	.wrapper {
 		padding: 6em 0 4em 0 ;
