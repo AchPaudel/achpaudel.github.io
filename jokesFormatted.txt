@@ -313,7 +313,7 @@ ans#104: Wrap music.
 joke#105: What falls in winter but never gets hurt
 ans#105: Snow.
 
-joke#106: How many months have  days
+joke#106: How many months have 30 days
 ans#106: All of them!
 
 joke#107: Why was the broom late to school
