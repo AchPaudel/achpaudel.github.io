@@ -56,6 +56,7 @@
 												outputText.push(text);
 												console.log("Fetched. 1.11");
 												let tText = outputText[0].split("joke");
+												tText.shift();
 												for (joke of tText){
 													console.log("Outputting..");
 													q = joke.split('ans')[0];
