@@ -54,7 +54,7 @@
 											let jokeBox = document.getElementById("generatedJoke");
 											let ansBox = document.getElementById("generatedAns");
 											let ansBtn = document.getElementById("ansbtn");
-											ansBtn.setAttribute('style', 'opacity:100; margin-left: 11vw');
+											ansBtn.setAttribute('style', 'opacity:100');
 											qBtn.setAttribute('style', 'opacity:0');
 											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => {
@@ -88,8 +88,8 @@
 											});
 										}
 									</script>
-									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh" id="qbtn" style="margin-left: 27vw;">Make me laugh</a></li><br />
-									<li><a href="#" class="button primary icon solid fa-laugh" id="ansbtn" style="opacity:0; margin-left: 27vw;">Answer</a></li>
+									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh" id="qbtn"">Make me laugh</a></li><br />
+									<li><a href="#" class="button primary icon solid fa-laugh" id="ansbtn" style="opacity:0">Answer</a></li>
 								</ul>
 								<p id="generatedJoke" style="text-align:center"></p>
 								<p id="generatedAns" style="opacity:0; text-align:center"></p>
