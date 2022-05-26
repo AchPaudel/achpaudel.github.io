@@ -52,7 +52,11 @@
 											genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
 											jokeBox = document.getElementById("generatedJoke");
 											jokeBox.innerHTML = "TESTETSTST";
-											fetch('jokesFormatted.txt').then(response => response.text()).then(text => console.log(text));
+											outputText = []
+											fetch('jokesFormatted.txt').then(response => response.text()).then(text => outputText.push(text));
+											for (joke of outputText){
+												jokeBox.innerText = jokeBox.innerText + joke + '\n';
+											}
 										}
 									</script>
 									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
