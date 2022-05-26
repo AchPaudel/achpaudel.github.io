@@ -48,6 +48,30 @@
 							<div class="inner">
 								<ul class="actions">
 									<script>
+										let qBtn = document.getElementById("qbtn");
+										let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
+										let jokeBox = document.getElementById("generatedJoke");
+										let ansBox = document.getElementById("generatedAns");
+										let ansBtn = document.getElementById("ansbtn");
+										const styleProp = {
+											'opacity': '100',
+										};
+										
+										qBtn.addEventListener('click', () => {
+										for (let [key, val] of Object.entries(styleProp)) {
+											console.log(`${key}: ${val}`)
+											ansBtn.setAttribute('style', `${key}: ${val}`)
+										}
+										});
+
+										ansBtn.addEventListener('click', () => {
+										for (let [key, val] of Object.entries(styleProp)) {
+											console.log(`${key}: ${val}`)
+											generatedAns.setAttribute('style', `${key}: ${val}`)
+										}
+										});
+
+
 										function generateJoke(){
 											let qBtn = document.getElementById("qbtn");
 											let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
@@ -65,29 +89,6 @@
 												a = jText[ranNum].split('ans')[1];
 												jokeBox.innerText = jokeBox.innerText + q + '\n';
 												ansBox.innerText = ansBox.innerText + a + '\n';
-												//////
-												//////
-												//////
-												//////
-												//////
-												const styleProp = {
-													'opacity': '100',
-												};
-												
-												qBtn.addEventListener('click', () => {
-												for (let [key, val] of Object.entries(styleProp)) {
-													console.log(`${key}: ${val}`)
-													ansBtn.setAttribute('style', `${key}: ${val}`)
-												}
-												});
-
-												ansBtn.addEventListener('click', () => {
-												for (let [key, val] of Object.entries(styleProp)) {
-													console.log(`${key}: ${val}`)
-													generatedAns.setAttribute('style', `${key}: ${val}`)
-												}
-												});
-
 											});
 										}
 									</script>
