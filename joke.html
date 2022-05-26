@@ -51,10 +51,11 @@
 										function generateJoke(){
 											genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
 											jokeBox = document.getElementById("generatedJoke");
-											jokeBox.innerHTML = "TESTETSTST";
-											outputText = []
+											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => outputText.push(text));
+											console.log("Fetched.");
 											for (joke of outputText){
+												console.log("Outputting..");
 												jokeBox.innerText = jokeBox.innerText + joke + '\n';
 											}
 										}
