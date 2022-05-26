@@ -52,7 +52,7 @@
 											genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
 											jokeBox = document.getElementById("generatedJoke");
 											outputText = [];
-											fetch('jokesFormatted.txt').then(response => response.text()).then(text => outputText.push(text));
+											fetch('jokesFormatted.txt').then(response => response.text()).then(text => this.outputText.push(text));
 											console.log("Fetched.");
 											for (joke of outputText){
 												console.log("Outputting..");
