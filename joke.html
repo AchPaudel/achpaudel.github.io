@@ -48,43 +48,46 @@
 							<div class="inner">
 								<ul class="actions">
 									<script>
-										function readJoke(){
+										function generateJoke(){
+											let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
+											let jokeBox = document.getElementById("generatedJoke");
+											let ansBox = document.getElementById("generatedAns");
+											let ansBtn = document.getElementById("ansbtn");
 											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => {
 												outputText.push(text);
 												console.log("Fetched. 1.12");
-												jText = outputText[0].split("joke");
+												let jText = outputText[0].split("joke");
 												jText.shift();
-												return jText;
+												ranNum = parseInt(Math.random() * jText.length);
+												q = jText[ranNum].split('ans')[0];
+												a = jText[ranNum].split('ans')[1];
+												jokeBox.innerText = jokeBox.innerText + q + '\n';
+												ansBox.innerText = ansBox.innerText + a + '\n';
+
+												const styleProp = {
+												'opacity': '0',
+												};
+
+												ansBtn.addEventListener('click', () => {
+												for (let [key, val] of Object.entries(styleProp)) {
+													console.log(`${key}: ${val}`)
+													generatedAns.setAttribute('style', `${key}: ${val}`)
+												}
+												});
+
 											});
 										}
-
-										function generateJoke(){
-												let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
-												let jokeBox = document.getElementById("generatedJoke");
-												ranNum = parseInt(Math.random() * 204);
-												jokeFound = readJoke()[ranNum];
-												var question = jokeFound.split('ans')[0];
-												jokeBox.innerText = question;
-										}
-
+									</script>
+									<script>
 										function generateAnswer(){
-											let jokeBox = document.getElementById("generatedJoke");
-											let ansBox = document.getElementById("generatedAns");
-											for (var i=0; i<203; i++){
-												jokeFound = readJoke()[i];
-												if(jokeBox.innerText === jokeFound.split('ans')[0]){
-													var answer = jokeFound.split('ans')[1];
-													ansBox.innerText = answer;
-												}
-											}
+											
 										}
 									</script>
 									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
-									<p id="generatedJoke"></p><br /><br />
-									<li><a href="#" onclick="generateAnswer()" class="button primary icon solid fa-laugh">Answer:</a></li>
-									<p id="generatedAns"></p><br /><br />
-									
+									<li><a href="#" class="button primary icon solid fa-laugh" id="ansbtn">Answer</a></li>
+									<p id="generatedJoke"></p>
+									<p id="generatedAns" style="opacity:100%"></p>
 								</ul>
 							</div>
 						</section>
