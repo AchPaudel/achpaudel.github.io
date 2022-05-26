@@ -2012,13 +2012,12 @@ input, select, textarea {
 
 	.icon {
 		position: relative;
-                text-decoration: none !important;
-                border:0px !important;
-                outline:none;
-                border-width: 0px;
-                outline-width:0px;
-                border-bottom: none;
-
+        text-decoration: none !important;
+        border:0px !important;
+        outline:none;
+        border-width: 0px;
+        outline-width:0px;
+        border-bottom: none;
 	}
 
 		.icon:before {
@@ -2137,14 +2136,15 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
-img {
-text-decoration: none !important;
-   border:0px !important;
-   outline:none;
-   border-width: 0px;
-   outline-width:0px;
-   border-bottom: none;
-}
+
+	 a{
+   		text-decoration: none !important;
+   		border:0px !important;
+   		outline:none;
+   		border-width: 0px;
+   		outline-width:0px;
+   		border-bottom: none;
+	}
 /* List */
 
 	ol {
