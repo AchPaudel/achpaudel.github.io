@@ -48,26 +48,44 @@
 							<div class="inner">
 								<ul class="actions">
 									<script>
-										      function generateJoke(){
-											let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
-											let jokeBox = document.getElementById("generatedJoke");
+										function readJoke(){
 											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => {
 												outputText.push(text);
-												console.log("Fetched. 1.11");
-												let tText = outputText[0].split("joke");
-												tText.shift();
-												for (joke of tText){
-													console.log("Outputting..");
-													q = joke.split('ans')[0];
-													a = joke.split('ans')[1];
-													jokeBox.innerText = jokeBox.innerText + q + '\n' + a + '\n';
-												}
+												console.log("Fetched. 1.12");
+												let jText = outputText[0].split("joke");
+												jText.shift();
+												return (jText);
 											});
+										}
+
+										function generateJoke(){
+												let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
+												let jokeBox = document.getElementById("generatedJoke");
+												ranNum = tofloor(Math.random() * 204);
+												jokeFound = readJoke()[ranNum];
+												var question = jokeFound.split('ans')[0];
+												jokeBox.innerText = question;
+										}
+									</script>
+									<script>
+										function generateAnswer(){
+											let jokeBox = document.getElementById("generatedJoke");
+											let ansBox = document.getElementById("generatedAns");
+											for (var i=0; i<204; i++){
+												jokeFound = readJoke()[i];
+												if(jokeBox.innerText === jokeFound.split('ans')[0]){
+													var answer = jokeFound.split('ans')[1];
+													ansBox.innerText = answer;
+												}
+											}
 										}
 									</script>
 									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
-									<p id="generatedJoke"></p>
+									<p id="generatedJoke"></p><br /><br />
+									<li><a href="#" onclick="generateAnswer()" class="button primary icon solid fa-laugh">Answer:</a></li>
+									<p id="generatedAns"></p><br /><br />
+									
 								</ul>
 							</div>
 						</section>
