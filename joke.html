@@ -63,10 +63,10 @@
 												let jText = outputText[0].split("joke");
 												jText.shift();
 												ranNum = parseInt(Math.random() * jText.length);
-												q = jText[ranNum].split('ans')[0];
-												a = jText[ranNum].split('ans')[1];
-												jokeBox.innerText = jokeBox.innerText + q + '?\n';
-												ansBox.innerText = ansBox.innerText + a + '.\n';
+												q = jText[ranNum].split('ans')[0] + '?';
+												a = jText[ranNum].split('ans')[1] + '.';
+												jokeBox.innerText = jokeBox.innerText + q + '\n';
+												ansBox.innerText = ansBox.innerText + a + '\n';
 												//////
 												//////
 												//////
