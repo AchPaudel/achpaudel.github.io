@@ -53,9 +53,9 @@
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => {
 												outputText.push(text);
 												console.log("Fetched. 1.12");
-												let jText = outputText[0].split("joke");
+												jText = outputText[0].split("joke");
 												jText.shift();
-												return (jText);
+												return jText;
 											});
 										}
 
