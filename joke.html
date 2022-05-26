@@ -62,17 +62,16 @@
 										function generateJoke(){
 												let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
 												let jokeBox = document.getElementById("generatedJoke");
-												ranNum = tofloor(Math.random() * 204);
+												ranNum = parseInt(Math.random() * 204);
 												jokeFound = readJoke()[ranNum];
 												var question = jokeFound.split('ans')[0];
 												jokeBox.innerText = question;
 										}
-									</script>
-									<script>
+
 										function generateAnswer(){
 											let jokeBox = document.getElementById("generatedJoke");
 											let ansBox = document.getElementById("generatedAns");
-											for (var i=0; i<204; i++){
+											for (var i=0; i<203; i++){
 												jokeFound = readJoke()[i];
 												if(jokeBox.innerText === jokeFound.split('ans')[0]){
 													var answer = jokeFound.split('ans')[1];
