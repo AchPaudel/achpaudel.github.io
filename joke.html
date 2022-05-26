@@ -54,7 +54,8 @@
 											let jokeBox = document.getElementById("generatedJoke");
 											let ansBox = document.getElementById("generatedAns");
 											let ansBtn = document.getElementById("ansbtn");
-											ansBtn.setAttribute('style', 'opacity:100')
+											ansBtn.setAttribute('style', 'opacity:100');
+											qBtn.setAttribute('style', 'opacity:0');
 											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => {
 												outputText.push(text);
@@ -77,8 +78,9 @@
 
 												ansBtn.addEventListener('click', () => {
 												for (let [key, val] of Object.entries(styleProp)) {
-													console.log(`${key}: ${val}`)
-													generatedAns.setAttribute('style', `${key}: ${val}`)
+													console.log(`${key}: ${val}`);
+													generatedAns.setAttribute('style', `${key}: ${val}`);
+													ansBtn.setAttribute('style', 'opacity:0');
 												}
 												});
 
