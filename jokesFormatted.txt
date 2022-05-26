@@ -115,7 +115,7 @@ ans#38: Married couples.
 joke#39: What kind of math do birds love
 ans#39: Owl-gebra!
 
-joke#40: Why can’t you ever tell a joke around glass
+joke#40: Why can’t you ever tell a j0ke around glass
 ans#40: It could crack up.
 
 joke#41: What do you call a Star Wars droid that takes the long way around
@@ -154,7 +154,7 @@ ans#51: Because they always have bills!
 joke#52: How did Benjamin Franklin feel holding his kite when he discovered electricity
 ans#52: Shocked!
 
-joke#53: When does a joke become a “dad” joke
+joke#53: When does a j0ke become a “dad” j0ke
 ans#53: When the punchline is a parent.
 
 joke#54: How much did the man sell his dead batteries for
@@ -211,7 +211,7 @@ ans#70: A bulldozer.
 joke#71: What do you call cheese that belongs to someone else
 ans#71: Nacho cheese!
 
-joke#72: Why are pizza jokes the worst
+joke#72: Why are pizza j0kes the worst
 ans#72: They’re too cheesy.
 
 joke#73: What kind of water cannot freeze
@@ -223,7 +223,7 @@ ans#74: Because it was holding up some pants.
 joke#75: Why did the peanut get into a rocket
 ans#75: He wanted to be an astro-nut!
 
-joke#76: Did you hear the joke about the roof
+joke#76: Did you hear the j0ke about the roof
 ans#76: Never mind, it would go over your head.
 
 joke#77: Why did the cookie go to the hospital
@@ -379,7 +379,7 @@ ans#126: “Do you smell carrots?”
 joke#127: How does a scientist freshen her breath
 ans#127: With experi-mints.
 
-joke#128: Why are elevator jokes the funniest
+joke#128: Why are elevator j0kes the funniest
 ans#128: Because they work on so many levels.
 
 joke#129: What do you call a sleeping T-Rex
