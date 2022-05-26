@@ -48,22 +48,24 @@
 							<div class="inner">
 								<ul class="actions">
 									<script>
-										async function generateJoke(){
+										      function generateJoke(){
 											let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
 											let jokeBox = document.getElementById("generatedJoke");
 											outputText = [];
-											fetch('jokesFormatted.txt').then(response => response.text()).then(function(text) { outputText.push(text) });
-											console.log("Fetched. 1.10");
-											let tText = outputText[0].split("joke");
-											for (joke of tText){
-												console.log("Outputting..");
-												q = joke.split('ans')[0];
-												a = joke.split('ans')[1];
-												jokeBox.innerText = jokeBox.innerText + q + '\n' + a + '\n';
-											}
+											fetch('jokesFormatted.txt').then(response => response.text()).then(text => {
+												outputText.push(text);
+												console.log("Fetched. 1.11");
+												let tText = outputText[0].split("joke");
+												for (joke of tText){
+													console.log("Outputting..");
+													q = joke.split('ans')[0];
+													a = joke.split('ans')[1];
+													jokeBox.innerText = jokeBox.innerText + q + '\n' + a + '\n';
+												}
+											});
 										}
 									</script>
-									<li><a href="#" onclick="await generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
+									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
 									<p id="generatedJoke"></p>
 								</ul>
 							</div>
