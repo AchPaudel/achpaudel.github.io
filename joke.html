@@ -49,6 +49,7 @@
 								<ul class="actions">
 									<script>
 										function generateJoke(){
+											let qBtn = document.getElementById("qbtn");
 											let genBtn = document.getElementsByClassName("button primary icon solid fa-laugh");
 											let jokeBox = document.getElementById("generatedJoke");
 											let ansBox = document.getElementById("generatedAns");
@@ -64,10 +65,21 @@
 												a = jText[ranNum].split('ans')[1];
 												jokeBox.innerText = jokeBox.innerText + q + '\n';
 												ansBox.innerText = ansBox.innerText + a + '\n';
-
+												//////
+												//////
+												//////
+												//////
+												//////
 												const styleProp = {
 													'opacity': '100',
 												};
+												
+												qBtn.addEventListener('click', () => {
+												for (let [key, val] of Object.entries(styleProp)) {
+													console.log(`${key}: ${val}`)
+													ansBtn.setAttribute('style', `${key}: ${val}`)
+												}
+												});
 
 												ansBtn.addEventListener('click', () => {
 												for (let [key, val] of Object.entries(styleProp)) {
@@ -79,12 +91,12 @@
 											});
 										}
 									</script>
-									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
-									<li><a href="#" class="button primary icon solid fa-laugh" id="ansbtn">Answer</a></li>
-									<br /><br />
-									<p id="generatedJoke"></p>
-									<p id="generatedAns" style="opacity:0"></p>
+									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh" id="qbtn">Make me laugh</a></li>
+									<li><a href="#" class="button primary icon solid fa-laugh" id="ansbtn" style="opacity:0">Answer</a></li>
 								</ul>
+								<br /><br />
+								<p id="generatedJoke"></p>
+								<p id="generatedAns" style="opacity:0"></p>
 							</div>
 						</section>
 					</article>
