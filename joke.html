@@ -53,15 +53,14 @@
 											jokeBox = document.getElementById("generatedJoke");
 											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => outputText.push(text));
-											console.log("Fetched. 1.4");
-											outputText = outputText[0].split("joke");
-											q = outputText.split('ans')[0];
-											a = outputText.split('ans')[1];
-											for (joke of outputText){
+											console.log("Fetched. 1.5");
+											testPut = outputText[0].split("joke");
+											for (joke of testPut){
 												console.log("Outputting...");
 												q = joke.split('ans')[0];
 												a = joke.split('ans')[1];
-												jokeBox.innerText = jokeBox.innerText + q + '\n' + a + '\n';
+												curr = jokeBox.innerText;
+												jokeBox.innerText = curr + q + '\n' + a + '\n';
 											}
 										}
 									</script>
