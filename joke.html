@@ -66,7 +66,7 @@
 												ansBox.innerText = ansBox.innerText + a + '\n';
 
 												const styleProp = {
-												'opacity': '100',
+													'opacity': '100',
 												};
 
 												ansBtn.addEventListener('click', () => {
@@ -79,13 +79,9 @@
 											});
 										}
 									</script>
-									<script>
-										function generateAnswer(){
-											
-										}
-									</script>
 									<li><a href="#" onclick="generateJoke()" class="button primary icon solid fa-laugh">Make me laugh</a></li>
 									<li><a href="#" class="button primary icon solid fa-laugh" id="ansbtn">Answer</a></li>
+									<br /><br />
 									<p id="generatedJoke"></p>
 									<p id="generatedAns" style="opacity:0"></p>
 								</ul>
