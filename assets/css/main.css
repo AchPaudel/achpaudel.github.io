@@ -2011,9 +2011,14 @@ input, select, textarea {
 /* Icon */
 
 	.icon {
-		text-decoration: none;
-		border-bottom: none;
 		position: relative;
+                text-decoration: none !important;
+                border:0px !important;
+                outline:none;
+                border-width: 0px;
+                outline-width:0px;
+                border-bottom: none;
+
 	}
 
 		.icon:before {
@@ -2132,7 +2137,14 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
-
+img {
+text-decoration: none !important;
+   border:0px !important;
+   outline:none;
+   border-width: 0px;
+   outline-width:0px;
+   border-bottom: none;
+}
 /* List */
 
 	ol {
