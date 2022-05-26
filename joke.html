@@ -54,7 +54,7 @@
 											outputText = [];
 											fetch('jokesFormatted.txt').then(response => response.text()).then(text => this.outputText.push(text));
 											console.log("Fetched. 1.0");
-											outputText = outputText.split("joke");
+											outputText = outputText[0].split("joke");
 											for (joke of outputText){
 												console.log("Outputting..");
 												jokeBox.innerText = jokeBox.innerText + joke + '\n';
