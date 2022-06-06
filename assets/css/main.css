@@ -2614,6 +2614,9 @@ input, select, textarea {
 			.features li:nth-child(10) {
 				background-color: rgba(0, 0, 0, 0.35);
 			}
+			.features li:nth-child(11) {
+				background-color: rgba(0, 0, 0, 0.21);
+			}
 
 			.features li:before {
 				display: block;
