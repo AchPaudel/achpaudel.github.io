@@ -72,6 +72,10 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+
+  
+
 /* Basic */
 
 	@-ms-viewport {
@@ -3553,6 +3557,7 @@ input, select, textarea {
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			letter-spacing: normal;
 		}
 
 			#header h1 a {
