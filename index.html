@@ -261,6 +261,7 @@
 										attribute when modal is displayed again */
 										$("#myModal").on('show.bs.modal', function(){
 											$("#cartoonVideo").attr('src', url);
+											$("#header").hide();
 										});
 
 										function runPostClick() {
@@ -273,7 +274,7 @@
 								
 									<div class="bs-example" style="text-align:left; margin-left:0em;">
 										<!-- Button HTML (to Trigger Modal) -->
-										<a href="#myModal" onclick="runPostClick()" class="btn btn-primary btn-lg" data-toggle="modal">Watch Demo</a>
+										<a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">Watch Demo</a>
 										
 										<!-- Modal HTML -->
 										<div id="myModal" class="modal fade">
