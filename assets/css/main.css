@@ -2891,6 +2891,7 @@ input, select, textarea {
 	width: 100%; /* Full width */
 	background-color: #ddd; /* Grey background */
 	height: 10px;
+	padding-left: 0;
 	}
 
 	.skills {
