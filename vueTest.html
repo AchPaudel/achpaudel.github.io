@@ -1,0 +1,37 @@
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+
+<script type="module">
+  import { createApp } from 'vue'
+
+  createApp({
+    data() {
+      return {
+        message: "This is vue!",
+        count: 0,
+        messageChange: false
+      }
+    },
+    methods: {
+      increment() {
+        this.count++
+      },
+
+      toggle() {
+        this.messageChange = !this.messageChange
+      }
+    }
+  }).mount('#app')
+</script>
+
+<div id="app">
+<h1 v-if="messageChange">{{count}}</h1>
+<h1 v-else>{{message}}</h1>
+<button @click="increment">{{ count }}</button>
+<button @click="toggle">Change message to count</button>
+</div>
