@@ -28,18 +28,18 @@ tlFourthScroll
 .fromTo(".certifications", 1, {y:"200%"}, {y:"0%"}, "-=1");
 
 tlProjectsBase
-.fromTo(".projectsHeader", 2, {y: "-80%"}, {y: "200%"});
+.fromTo(".projectsHeader", 5, {y: "-50%"}, {y: "200%"});
 
 tlProjects
 .fromTo(".trigger6", 2, {y: "200%"}, {y: "0%"});
 
 tlProjectsRow1
-.fromTo(".trigger7", 3, {scale: 0.25, x: "200%", y:"-50%", rotation:"180"}, {scale:0.80 , x: "0%", y:"0%", rotation:"360"}, 0)
-.fromTo(".trigger8", 3, {scale: 0.25, x: "-200%", y:"-50%", rotation:"-180"}, {scale: 0.80, x: "0%", y:"0%", rotation:"-360"}, 0)
-.fromTo(".trigger9", 3,  {scale: 0.25, x: "200%", y:"-50%", rotation:"180"}, {scale: 0.70, x: "0%", y:"0%", rotation:"360"}, "4")
-.fromTo(".trigger10", 3,  {scale: 0.25, x: "-200%", y:"-50%", rotation:"-180"}, {scale: 0.70, x: "0%", y:"0%", rotation:"-360"}, "4")
-.fromTo(".trigger11", 3,  {scale: 0.25, x: "200%", y:"-150%", rotation:"180"}, {scale: 0.80, x: "0%", y:"0%", rotation:"360"}, "8")
-.fromTo(".trigger12", 3, {scale: 0.25, x: "-200%", y:"-150%", rotation:"-180"}, {scale: 0.80, x: "0%", y:"0%", rotation:"-360"}, "8");
+.fromTo(".trigger7", 1, {scale: 0.25, x: "200%", y:"-50%", rotation:"180", }, {ease: Bounce.easeOut, scale:0.80 , x: "0%", y:"0%", rotation:"360"}, "-=2")
+.fromTo(".trigger8", 1, {scale: 0.25, x: "-200%", y:"-50%", rotation:"-180"}, {ease: Bounce.easeOut, scale: 0.80, x: "0%", y:"0%", rotation:"-360"}, "-=2")
+.fromTo(".trigger9", 2,  {scale: 0.25, x: "200%", y:"-50%", rotation:"180"}, {ease: Bounce.easeOut, scale: 0.70, x: "0%", y:"0%", rotation:"360"}, "1.5")
+.fromTo(".trigger10", 2,  {scale: 0.25, x: "-200%", y:"-50%", rotation:"-180"}, {ease: Bounce.easeOut, scale: 0.70, x: "0%", y:"0%", rotation:"-360"}, "1.5")
+.fromTo(".trigger11", 2,  {scale: 0.25, x: "200%", y:"-150%", rotation:"180"}, {ease: Bounce.easeOut, scale: 0.80, x: "0%", y:"0%", rotation:"360"}, "4")
+.fromTo(".trigger12", 2, {scale: 0.25, x: "-200%", y:"-150%", rotation:"-180"}, {ease: Bounce.easeOut, scale: 0.80, x: "0%", y:"0%", rotation:"-360"}, "4");
 
 
 var scene1 = new ScrollMagic.Scene({
