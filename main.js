@@ -48,7 +48,6 @@ var scene1 = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(tlSecondScroll)
-.addIndicators()
 .addTo(controller);
 
 var scene2 = new ScrollMagic.Scene({
@@ -57,7 +56,6 @@ var scene2 = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(tlThirdScroll)
-.addIndicators()
 .addTo(controller);
 
 var scene3 = new ScrollMagic.Scene({
@@ -66,7 +64,6 @@ var scene3 = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(tlFourthScroll)
-.addIndicators()
 .addTo(controller);
 
 var scene4 = new ScrollMagic.Scene({
@@ -75,7 +72,6 @@ var scene4 = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(tlProjectsBase)
-.addIndicators()
 .addTo(controller);
 
 var scene5 = new ScrollMagic.Scene({
@@ -85,7 +81,6 @@ var scene5 = new ScrollMagic.Scene({
 })
 .setTween(tlProjects)
 .setPin(".trigger6")
-.addIndicators()
 .addTo(controller);
 
 var scene6 = new ScrollMagic.Scene({
@@ -94,6 +89,5 @@ var scene6 = new ScrollMagic.Scene({
     duration: "300%"
 })
 .setTween(tlProjectsRow1)
-.addIndicators()
 .addTo(controller);
 
