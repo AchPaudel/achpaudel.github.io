@@ -13,51 +13,87 @@ var controller = new ScrollMagic.Controller();
 var tlSecondScroll = new TimelineMax();
 var tlThirdScroll = new TimelineMax();
 var tlFourthScroll = new TimelineMax();
-
-
+var tlProjectsBase = new TimelineMax();
 var tlProjects = new TimelineMax();
+var tlProjectsRow1 = new TimelineMax();
 
 tlSecondScroll
-.fromTo('.intro', 2, {scale: 2, y:"200%"}, {scale: 1, y:"0%"});
+.fromTo('.intro', 2, {y:"200%"}, {y:"0%"});
 
 tlThirdScroll
-.fromTo('.aboutme', 2, {scale: 2, y:"200%"}, {scale:1, y:"0%"});
+.fromTo('.aboutme', 1, {y:"200%"}, {y:"0%"});
 
 tlFourthScroll
-.fromTo(".skillsBox", 2, {scale: 2, y:"200%"}, {scale:1, y:"0%"})
-.fromTo(".certifications", 2, {scale: 2, y:"200%"}, {scale:1, y:"0%"});
+.fromTo(".skillsBox", 1, {y:"200%"}, {y:"0%"})
+.fromTo(".certifications", 1, {y:"200%"}, {y:"0%"}, "-=1");
+
+tlProjectsBase
+.fromTo(".projectsHeader", 2, {y: "-80%"}, {y: "200%"});
 
 tlProjects
-.fromTo('#three', 2, {y: "200%"}, {y: "0%"});
+.fromTo(".trigger6", 2, {y: "200%"}, {y: "0%"});
+
+tlProjectsRow1
+.fromTo(".trigger7", 3, {scale: 0.25, x: "200%", y:"-50%", rotation:"180"}, {scale:0.80 , x: "0%", y:"0%", rotation:"360"}, 0)
+.fromTo(".trigger8", 3, {scale: 0.25, x: "-200%", y:"-50%", rotation:"-180"}, {scale: 0.80, x: "0%", y:"0%", rotation:"-360"}, 0)
+.fromTo(".trigger9", 3,  {scale: 0.25, x: "200%", y:"-50%", rotation:"180"}, {scale: 0.70, x: "0%", y:"0%", rotation:"360"}, "4")
+.fromTo(".trigger10", 3,  {scale: 0.25, x: "-200%", y:"-50%", rotation:"-180"}, {scale: 0.70, x: "0%", y:"0%", rotation:"-360"}, "4")
+.fromTo(".trigger11", 3,  {scale: 0.25, x: "200%", y:"-150%", rotation:"180"}, {scale: 0.80, x: "0%", y:"0%", rotation:"360"}, "8")
+.fromTo(".trigger12", 3, {scale: 0.25, x: "-200%", y:"-150%", rotation:"-180"}, {scale: 0.80, x: "0%", y:"0%", rotation:"-360"}, "8");
+
 
 var scene1 = new ScrollMagic.Scene({
-    triggerElement: ".SM",
-    triggerHook: "onCenter",
-    duration: "50%"
+    triggerElement: ".trigger1",
+    triggerHook: "onEnter",
+    duration: "100%"
 })
 .setTween(tlSecondScroll)
+.addIndicators()
 .addTo(controller);
 
 var scene2 = new ScrollMagic.Scene({
-    triggerElement: ".intro",
-    triggerHook: "onCenter",
-    duration: "50%"
+    triggerElement: ".trigger2",
+    triggerHook: "onEnter",
+    duration: "100%"
 })
 .setTween(tlThirdScroll)
+.addIndicators()
 .addTo(controller);
 
 var scene3 = new ScrollMagic.Scene({
-    triggerElement: ".aboutme",
-    triggerHook: "onCenter",
-    duration: "75%"
+    triggerElement: ".trigger3",
+    triggerHook: "onEnter",
+    duration: "100%"
 })
 .setTween(tlFourthScroll)
+.addIndicators()
 .addTo(controller);
 
 var scene4 = new ScrollMagic.Scene({
-    triggerElement: ".certifications",
-    triggerHook: "onCenter",
+    triggerElement: ".projectsBase",
+    triggerHook: "onEnter",
     duration: "100%"
 })
+.setTween(tlProjectsBase)
+.addIndicators()
+.addTo(controller);
+
+var scene5 = new ScrollMagic.Scene({
+    triggerElement: ".projectsBase",
+    triggerHook: "onEnter",
+    duration: "75%"
+})
 .setTween(tlProjects)
-.addTo(controller)
+.setPin(".trigger6")
+.addIndicators()
+.addTo(controller);
+
+var scene6 = new ScrollMagic.Scene({
+    triggerElement: ".trigger6",
+    triggerHook: "onLeave",
+    duration: "300%"
+})
+.setTween(tlProjectsRow1)
+.addIndicators()
+.addTo(controller);
+
