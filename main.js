@@ -36,7 +36,6 @@ var scene1 = new ScrollMagic.Scene({
     duration: "50%"
 })
 .setTween(tlSecondScroll)
-.addIndicators()
 .addTo(controller);
 
 var scene2 = new ScrollMagic.Scene({
@@ -45,7 +44,6 @@ var scene2 = new ScrollMagic.Scene({
     duration: "50%"
 })
 .setTween(tlThirdScroll)
-.addIndicators()
 .addTo(controller);
 
 var scene3 = new ScrollMagic.Scene({
@@ -54,14 +52,12 @@ var scene3 = new ScrollMagic.Scene({
     duration: "75%"
 })
 .setTween(tlFourthScroll)
-.addIndicators()
 .addTo(controller);
 
 var scene4 = new ScrollMagic.Scene({
     triggerElement: ".certifications",
-    triggerHook: "onEnter",
+    triggerHook: "onCenter",
     duration: "100%"
 })
 .setTween(tlProjects)
-.addIndicators()
 .addTo(controller)
