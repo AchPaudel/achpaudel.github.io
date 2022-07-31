@@ -3,8 +3,8 @@
 	<head>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<link rel="shortcut icon" type="image/jpg" href="images/headshot.jpeg"/>
 		<title>Achyut Paudel's Personal Website</title>
 		<meta charset="utf-8" />
@@ -69,8 +69,7 @@
 								<li class="SM"><a href="https://twitter.com/achpaudel"><span class="icon brands fa-twitter major style3"><span class="label">Twitter</span></span></li></a>
 								<li class="SM"><a href="./discord.html"><span class="icon brands fa-discord major style1"><span class="label">Discord</span></span></li></a>
 							</ul>
-							<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-							<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+							
 					</div>
 					</section>
 
@@ -366,20 +365,14 @@
 						video.pause();
 					}
 				};
+				</script>
 				
-				</script>
-				<script>
-					gsap.fromTo("#one",{y: 500}, {scrollTrigger:"#banner", y:0, delay: 1, duration: 1});
-					gsap.fromTo(".SM", {x: -500}, {scrollTrigger:"#one", x:0, rotation: 360, duration: 1});
-					gsap.fromTo("#two",{y: 500}, {scrollTrigger:".SM", y:0, duration: 0.5});
-					gsap.fromTo(".intro",{y: 500}, {scrollTrigger:"#two", y:0, duration: 1.0});
-					gsap.fromTo(".aboutme",{y: 500}, {scrollTrigger:".intro", y:0, duration: 1.0});
-					gsap.fromTo(".skillsBox",{y: 500}, {scrollTrigger:".aboutme", y:0, duration: 1.0});
-					gsap.fromTo(".certifications",{y: 500}, {scrollTrigger:".aboutme", y:0, duration: 1.5});
-					//gsap.fromTo(".certifications",{y: 500}, {scrollTrigger:".certifications", y:0, duration: 0.5});	
-					gsap.fromTo("#three",{y: 500}, {scrollTrigger:".certifications", y:0, duration: 0.5});
-					gsap.fromTo(".projectsContent",{y: 500}, {scrollTrigger:"#three", y:0, duration: 1.5});
-				</script>
-
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/jquery.gsap.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+				<script type="text/javascript" src="./main.js"></script>
 	</body>
 </html>
