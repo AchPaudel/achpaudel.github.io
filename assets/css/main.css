@@ -2776,11 +2776,13 @@ input, select, textarea {
 			order: 1;
 			border-radius: 0;
 			width: 40%;
+			height: 100%;
 		}
 
 			.spotlight .image img {
 				border-radius: 0;
 				width: 100%;
+				height: 46em;
 			}
 
 		.spotlight .content {
